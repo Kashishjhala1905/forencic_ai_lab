@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b1220;
+  --color-panel: #111a2e;
+  --color-panel2: #16213a;
+  --color-line: #263654;
+  --color-fg: #e6edf7;
+  --color-muted: #9bacc9;
+  --color-teal: #2dd4bf;
+  --color-sky: #38bdf8;
+  --color-ok: #34d399;
+  --color-warn: #fbbf24;
+  --color-bad: #f87171;
+  --font-sans: Inter, "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, "Courier New", monospace;
+}
+
+html, body, #root { height: 100%; }
+body { background: radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.08), transparent 60%), #0b1220; color: var(--color-fg); font-family: var(--font-sans); }
+:focus-visible { outline: 2px solid var(--color-sky); outline-offset: 2px; border-radius: 6px; }
+::selection { background: rgba(45,212,191,.35); }
+@keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fadein .25s ease-out; }
+@keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(400%); } }
+@media (prefers-reduced-motion: reduce) { .fade-in, .scan-line { animation: none !important; } }
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: #2b3d60 transparent; }

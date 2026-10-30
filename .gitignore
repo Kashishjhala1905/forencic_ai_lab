@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+node_modules/
+dist/
+.pytest_cache/
+storage/*
+!storage/.gitkeep
+sample_documents/*.png
+sample_documents/*.pdf
+sample_documents/*.jpg
+*.db
